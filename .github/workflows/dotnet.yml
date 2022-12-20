@@ -1,0 +1,31 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 7.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Publish
+      run: dotnet publish 
+    - name: Stop ruokalista systemd service
+      run: sudo systemctl stop ruokalista
+    - name: Production update
+      run:  rsync -va /home/ubuntu/actions-runner/_work/Digiruokalista.com/Digiruokalista.com/Ruokalistat.tk/bin/Debug/net7.0/publish/ /home/ubuntu/Ruokalista/
+    - name: Start ruokalista systemd service
+      run: sudo systemctl start ruokalista    
