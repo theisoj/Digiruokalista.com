@@ -45,7 +45,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.1" />
     <PackageReference Include="AspNetCore.SEOHelper" Version="1.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-    <PackageReference Include="FirebaseAdmin" Version="2.3.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0-silver.1" />
     <PackageReference Include="React.AspNet" Version="5.2.12" />
     <PackageReference Include="React.AspNet.Middleware" Version="5.2.12" />
