@@ -15,8 +15,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 using Microsoft.Extensions.Logging;
-using FirebaseAdmin;
-using Google.Apis.Auth.OAuth2;
+
 using Microsoft.AspNetCore.Http;
 using System.Collections;
 using System.Text;
