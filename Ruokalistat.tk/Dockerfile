@@ -11,5 +11,5 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /Ruokalistat.tk
-COPY --from=build-env /App/out .
+COPY --from=build-env /Ruokalistat.tk/out .
 ENTRYPOINT ["dotnet", "Digiruokalista.com.dll"]
