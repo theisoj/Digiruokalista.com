@@ -165,8 +165,8 @@ else
     }
     $(document).ready(function () {
         if (sessionStorage['page'] == document.URL) {
-            document.body.scrollTop = localStorage['scrollTop'];
-            document.documentElement.scrollTop = localStorage['scrollTop'];
+            document.body.scrollTop = sessionStorage['scrollTop'];
+            document.documentElement.scrollTop = sessionStorage['scrollTop'];
         }
         $(document).scroll(function () {
             sessionStorage['page'] = document.URL;
