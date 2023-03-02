@@ -25,6 +25,7 @@ namespace Ruokalistat.tk.Models
         }
 
         public virtual DbSet<Yritys> Yritys { get; set; }
+        public virtual DbSet<Device> Laitteet { get; set; }
         public virtual DbSet<Hintahistoria> Hintahistoria { get; set; }
         public virtual DbSet<Ruokalista> Ruokalista {get;set;}
         public virtual DbSet<Ruoka> Ruoka {get;set;}

@@ -45,10 +45,6 @@ namespace Ruokalistat.tk
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<tietokantaContext>();
             builder.Services.AddControllersWithViews();
-            if (!System.OperatingSystem.IsMacOS())
-            {
-                builder.WebHost.UseUrls("http://*:6669");
-            }
             builder.Services.AddTransient<IEmailSender,Special.Mail>();
             builder.Services.AddCors(options =>
             {
@@ -86,6 +82,7 @@ namespace Ruokalistat.tk
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
                 app.UseForwardedHeaders();
+                builder.WebHost.UseUrls("http://*:6669");
             }
             else
             {

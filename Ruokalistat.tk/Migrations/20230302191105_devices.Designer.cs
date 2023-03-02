@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Ruokalistat.tk.Models;
 
@@ -10,9 +11,11 @@ using Ruokalistat.tk.Models;
 namespace Digiruokalista.com.Migrations
 {
     [DbContext(typeof(tietokantaContext))]
-    partial class tietokantaContextModelSnapshot : ModelSnapshot
+    [Migration("20230302191105_devices")]
+    partial class devices
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -39,11 +39,6 @@ namespace Ruokalistat.tk.Controllers
             return View();
         }
 
-        public IActionResult Licenses()
-        {
-            return View();
-        }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
